@@ -2,41 +2,103 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-        <!--bootstrap links-->
-        <link rel="stylesheet" href="./css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--bootstrap links-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="./css/style.css">
         <!--links css to html-->
-        <title>Weather Dashboard</title> <!--This is the tile on the browser tab-->
+
+        <title>Weather Dassh</title> <!--This is the tile on the browser tab-->
     </head>
  <body>
-    <header class="container-fluid text-center text-white bg-dark p-2 col-lg">
-        <h1>Weather Dashboard</h1> <!--Tile of webpage-->
-    </header>
+     
+    <nav class="container-fluid text-center text-white bg-primary p-2 col-lg">
+        <h1>Weather Dassh!</h1> <!--Tile of webpage-->
+    </nav>
 
     <div class="container-fluid" width: 100%> <!--container of the context of the webpage-->
         <div class="row"> <!--row, which will allow user to enter in the city they wish to search-->
             <div class="cl-lg-4 bg-light"> <!--container/column width-->
                 <h2 class="mt-3">Search for a city:</h2> <!--the text that appears inside the search engine; mt-1 (margin + top)-3 (full space)-->
             <div class="input-group mb-3"> <!--this is the form sizing -->
-                <input type="text" id="enter city" class="form-control" placeholder="Enter a City" aria-label="Enter a city"> <!--addons to the search engine-->
+                <input id="enter city" type="text"class="form-control" placeholder="Enter a City" aria-label="Enter a city"> <!--addons to the search engine-->
+
+                <div class="input-group-append"></div>
                 <button class="btn btn-primary" type="button" id="search-button"><text>Search</text></button>
                 <!--button to allow user to search city-->
+                </div> <!--this div allows spacing between the seach and clear history button-->
                 <button class="btn btn-primary" type="button" id="clear-history">Clear history</button>
                 <form id="history"></form>
               <!--button for to allow user to clear history-->
             </div>
-            </div>
-                <div class ="row" id="fiveday-header"></div>
-                <div class="col-12">
+            <div class="col-8"> <!-- this starts the classes for the city name, temp, humidity, wind-speed, and UV index-->
+                <div class="row mr-0">
+                    <div class="col-12 border border-dark m-3">
+                        <div class="row">
+                            <div class="col-12">
+                                <span id="city-name" class="city-name align-middle"></span>
+                                <img id="current-pic" src=" placeholder" alt="">
+                            </div>
+                        </div>
+                        <div class="row"> <!--temperature-->
+                            <div class="col-12">
+                                <p id="temperature"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"> <!--humidity-->
+                                <p id="humidity"></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12"> <!--wind-speed-->
+                                <p id="wind-speed"></p>
+                            </div>
+                        </div>
+                        <div class="row"> <!--UV-index-->
+                            <div class="col-12 d-flex">
+                                <p id="UV-index"></p>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <div class ="row">
+                    <div class="col">
                     <h4>5 Day Forecast</h4>
+                    <!--display header for forecast-->
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <script src="./assets/js/script.js"></script>
+                <div class="row"> <!--this will display the 5 day forcast-->
+                    <div class="col-3 bg-primary text-white m-3"> Day 1<div>
+                        <!--5 large displays with background color of blue and text of white-->
+                    </div>  
+                </div>
+
+                <div class="row">
+                    <div class="col-md-3 bg-primary text-white m-3"> Day 2<div>
+                    </div>  
+                </div>
+
+                <div class="row">
+                    <div class="col-3 bg-primary text-white m-3"> Day 3<div>
+                    </div>  
+                </div>
+
+                <div class="row">
+                    <div class="col-3 bg-primary text-white m-3"> Day 4<div>
+                    </div>  
+                </div>
+
+                <div class="row">
+                    <div class="col-3 bg-primary text-white m-3"> Day 5<div>
+                    </div>  
+                </div>
+                
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
 
