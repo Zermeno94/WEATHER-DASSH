@@ -1,7 +1,11 @@
-body {
+.body {
     background-color: white;
+
 }
 
-div {
-    background-color: white;
+.div {
+    background-color:white
 }
+
+
+/* I dont think i need much CSS since I'm keeping it simple. May need it when it comes to dispalying weather conditions
