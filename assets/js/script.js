@@ -16,9 +16,11 @@ for (var i = 0; i < localStorage.length; i++) {
     var cityName = $(".list-group").addClass("list-group-item");
 
     cityName.append("<li>" + city + "</li>");
-}
+} 
+
 
 // Need to do:
+
 //THEN I am presented with current and future conditions for that city and that city is added to the search history
 
 //WHEN I view current weather conditions for that city
