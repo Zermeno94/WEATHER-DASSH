@@ -10,7 +10,7 @@ Third-party APIs allow developers to access their data and functionality by maki
 2. Added a search engine, which will allow user to enter the city they wish to search for. 
 3. Responsive button added to the engine. 
 
-*** ENTER SCREENSHOT OF WEBPAGE ***
+![Weather Dassh](https://user-images.githubusercontent.com/87839888/133872988-0dace084-ffbf-494e-916a-7463061220c5.png)
 
 # Credits 
 Miranda Zermeno
