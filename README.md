@@ -11,7 +11,7 @@ Third-party APIs allow developers to access their data and functionality by maki
 3. Responsive button added to the engine. 
 4. Displayed 5 day forecast using OpenWeather API
 
-![Weather Dassh](https://user-images.githubusercontent.com/87839888/133872988-0dace084-ffbf-494e-916a-7463061220c5.png)
+![WEATHER DASSH!](https://user-images.githubusercontent.com/87839888/135187426-47b9b66f-fe5e-4293-8caa-c4625114d672.png)
 
 
 Deployed Website [https://zermeno94.github.io/WEATHER-DASSH/]
