@@ -1,112 +1,132 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--bootstrap links-->
+    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-    
     <link rel="stylesheet" href="./css/style.css">
-        <!--links css to html-->
+    <script src="https://kit.fontawesome.com/70fcd40144.js" crossorigin="anonymous"></script>
+</head>
 
-        <title>Weather Dassh</title> <!--This is the tile on the browser tab-->
-    </head>
- <body>
-     
-    <nav class="container-fluid text-center text-white bg-primary p-2 col-lg">
-        <h1>Weather Dassh!</h1> <!--Tile of webpage-->
-    </nav>
+<body>
 
-    <div class="container-fluid" width: 100%> <!--container of the context of the webpage-->
-        <div class="row"> <!--row, which will allow user to enter in the city they wish to search-->
-            <div class="cl-lg-4 bg-light"> <!--container/column width-->
-                <h2 class="mt-3">Search for a city:</h2> <!--the text that appears inside the search engine; mt-1 (margin + top)-3 (full space)-->
-            <div class="input-group mb-3"> <!--this is the form sizing -->
-                <input id="enter city" type="text"class="form-control" placeholder="Enter a City" aria-label="Enter a city"> <!--addons to the search engine-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
 
-                <div class="input-group-append"></div>
-                <button class="btn btn-primary" type="button" id="search-button"><text>Search</text></button>
-                <!--button to allow user to search city-->
-                </div> <!--this div allows spacing between the seach and clear history button-->
-                <button class="btn btn-primary" type="button" id="clear-history">Clear history</button>
-                <form id="history"></form>
-              <!--button for to allow user to clear history-->
-            </div>
-            <div class="col-8"> <!-- this starts the classes for the city name, temp, humidity, wind-speed, and UV index-->
-                <div class="row mr-0">
-                    <div class="col-12 border border-dark m-3">
-                        <div class="row">
-                            <div class="col-12">
-                                <span id="city-name" class="city-name align-middle"></span>
-                                <img id="current-pic" src=" placeholder" alt="">
+    <header>
+        <h1 class="container-fluid text-center text-white bg-primary p-2 col-lg"> WEATHER DASSH!!
+    </h1>
+    </header>
+
+    <br>
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <div class=row>
+            <div class="col-md-3">
+                <div class="card" style="width: 100%;">
+                    <div class="search-box">
+                        <h2>Search for a City:</h2>
+                        <form  id="searchBox" class="form-inline">
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="city-input">
                             </div>
-                        </div>
-                        <div class="row"> <!--temperature-->
-                            <div class="col-12">
-                                <p id="temperature"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12"> <!--humidity-->
-                                <p id="humidity"></p>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12"> <!--wind-speed-->
-                                <p id="wind-speed"></p>
-                            </div>
-                        </div>
-                        <div class="row"> <!--UV-index-->
-                            <div class="col-12 d-flex">
-                                <p id="UV-index"></p>
-                            </div>
-                        </div>
-                    </div>
-                 </div>
-                <div class ="row">
-                    <div class="col">
-                    <h4>5 Day Forecast</h4>
-                    <!--display header for forecast-->
+                            <button id="search-button" type="submit" class="btn btn-primary"><i
+                                    class="fas fa-search"></i></button>
+                        </form>
                     </div>
                 </div>
-                <!--make a container then add divs inside the container. -->
-    
-                    <div class="container">
-                        <div class="row">
-                        <div class="col-2 bg-primary text-white m-3"></div>
-                            <!--5 large displays with background color of blue and text of white--> 
-                    <!--why isn't my columns not uniform??-->
-                        <div class="col-md-2 bg-primary text-white m-3"></div>
-                    
-                        <div class="col-2 bg-primary text-white m-3"></div>
- 
-
-                        <div class="col-2 bg-primary text-white m-3"></div>
-                        
-                    
-                        <div class="col-2 bg-primary text-white m-3"></div>
-                        
-                            </div>
+                <div class="prevousSearches"></div>
+                <div id="city-history" class="card">
+                    <p>Previous Searches</p>
+                </div>    
+                    <ul id="city-list" class="list-group"></ul>
+                </div>
+            </div>
+            <div class="col md-9">
+                <div id="current-weather" class="card">
+                    <div class="card">
+                        <div id="city-date-icon">
+                            <span id='city-name'>
+                            </span>
+                            <span id='current-icon'></span>
+                        </div>
+                        <p class="card-text" id="current-temp"></p>
+                        <p class="card-text" id="current-humidity"></p>
+                        <p class="card-text" id="current-wind"></p>
+                        <p class="card-text" id="current-uv"></p>
+                        </ul>
                     </div>
+                </div>
+                <div class="row">
+                    <div id="forecast-weather" class="col-md-9">
+                        <h3>5-Day Forecast:</h3>
+                        <div id="forecast-cards">
+                            <div class="card forecast">
+                                <div id="forecast1" class="card-body">
+                                    <span class="card-title" id='forecast-date-1'>
+                                    </span>
+                                    <span id='forecast-date-icon1'></span>
+                                    <p class="card-text" id="forecast-temp1"></p>
+                                    <p class="card-text" id="forecast-humidity1"></p>
+                                </div>
+                            </div>
+                            <div class="card forecast">
+                                <div id="forecast2" class="card-body">
+                                    <span class="card-title" id='forecast-date-2'>
+                                    </span>
+                                    <span id='forecast-icon2'></span>
+                                    <p class="card-text" id="forecast-temp2"></p>
+                                    <p class="card-text" id="forecast-humidity2"></p>
+                                </div>
+                            </div>
+                            <div class="card forecast">
+                                <div id="forecast3" class="card-body">
+                                    <span class="card-title" id='forecast-date-3'>
+                                    </span>
+                                    <span id='forecast-icon3'></span>
+                                    <p class="card-text" id="forecast-temp3"></p>
+                                    <p class="card-text" id="forecast-humidity3"></p>
+                                </div>
+                            </div>
+                            <div class="card forecast">
+                                <div id="forecast4" class="card-body">
+                                    <span class="card-title" id='forecast-date-4'>
+                                    </span>
+                                    <span id='forecast-icon4'></span>
+                                    <p class="card-text" id="forecast-temp4"></p>
+                                    <p class="card-text" id="forecast-humidity4"></p>
+                                </div>
+                            </div>
+                            <div class="card forecast">
+                                <div id="forecast5" class="card-body">
+                                    <span class="card-title" id='forecast-date-5'>
+                                    </span>
+                                    <span id='forecast-icon5'></span>
+                                    <p class="card-text" id="forecast-temp5"></p>
+                                    <p class="card-text" id="forecast-humidity5"></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    
-<script src="https://code.jquery.com/jquery.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>       
-<!--js link-->   
- <script src="assets/js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="./js/script.js"></script>
+
 </body>
-</html>
 
+</html>
 <!--Need to Do-->
 
-<!--add jumbotron? to display the city with temp, wind, humdity and UV index-->
-
-<!--## User Story
-
-```
+<!--```
 AS A traveler
 I WANT to see the weather outlook for multiple cities
 SO THAT I can plan a trip accordingly
