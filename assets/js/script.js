@@ -1,3 +1,5 @@
+//starts fun
+
 function createCityList(citySearchList) {
     $("#city-list").empty();
   
@@ -21,6 +23,8 @@ function createCityList(citySearchList) {
   function populateCityWeather(city, citySearchList) {
     createCityList(citySearchList);
   
+
+    // variables for OpenWeather APIs 
     var queryURL =
       "https://api.openweathermap.org/data/2.5/weather?&units=imperial&appid=885e9149105e8901c9809ac018ce8658&q=" +
       city;
@@ -32,29 +36,33 @@ function createCityList(citySearchList) {
     var lat;
     var lon;
   
+    // fetches OpenWeather API data 
     $.ajax({
       url: queryURL,
       method: "GET"
     })
-      // Store all of the retrieved data inside of an object called "weather"
+      // retrieves data inside of an object called "weather"
       .then(function(weather) {
         // Log the queryURL
         console.log(queryURL);
   
-        // Log the resulting object
+        // Logs object in console 
         console.log(weather);
+
+        //variable for date/time
   
         var nowMoment = moment();
   
-        var displayMoment = $("<h3>");
+        var displayMoment = $("<h4>");
         $("#city-name").empty();
         $("#city-name").append(
           displayMoment.text("(" + nowMoment.format("M/D/YYYY") + ")")
         );
   
-        var cityName = $("<h3>").text(weather.name);
+        var cityName = $("<h4>").text(weather.name);
         $("#city-name").prepend(cityName);
-  
+        
+        // variable for weather icons
         var weatherIcon = $("<img>");
         weatherIcon.attr(
           "src",
@@ -70,6 +78,7 @@ function createCityList(citySearchList) {
         lat = weather.coord.lat;
         lon = weather.coord.lon;
   
+        // variable for OpenWeather API for lat & lon
         var queryURL3 =
           "https://api.openweathermap.org/data/2.5/uvi/forecast?&units=imperial&appid=c835f5e0d135d1c788e373d4a940d4e0&q=" +
           "&lat=" +
@@ -77,10 +86,11 @@ function createCityList(citySearchList) {
           "&lon=" +
           lon;
   
+        // fetches OpenWeather API data
           $.ajax({
           url: queryURL3,
           method: "GET"
-          // Store all of the retrieved data inside of an object called "uvIndex"
+          // retrieves data inside of an object called "uvIndex"
         }).then(function(uvIndex) {
           console.log(uvIndex);
   
@@ -90,16 +100,19 @@ function createCityList(citySearchList) {
           $("#current-uv").text("UV Index: ");
           $("#current-uv").append(uvIndexDisplay.text(uvIndex[0].value));
           console.log(uvIndex[0].value);
-  
+          
+          //fetches OpenWeather API data
           $.ajax({
             url: queryURL2,
             method: "GET"
-            // Store all of the retrieved data inside of an object called "forecast"
+            // retrieves data inside of an object called "forecast"
           }).then(function(forecast) {
             console.log(queryURL2);
   
             console.log(forecast);
-            // Loop through the forecast list array and display a single forecast entry/time (5th entry of each day which is close to the highest temp/time of the day) from each of the 5 days
+
+            // Loop through the forecast list array and displays each day's forecast
+      
             for (var i = 6; i < forecast.list.length; i += 8) {
               // 6, 14, 22, 30, 38
               var forecastDate = $("<h5>");
@@ -167,7 +180,7 @@ function createCityList(citySearchList) {
         .toLowerCase();
   
       if (city != "") {
-        //Check to see if there is any text entered
+
       
         citySearchList[city] = true;
       localStorage.setItem("citySearchList", JSON.stringify(citySearchList));
