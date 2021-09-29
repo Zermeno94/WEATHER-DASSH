@@ -17,7 +17,7 @@ body {
     width: 22rem;
   }
   
-  #city-date-icon,
+  #city-daste-icon,
   #city-name,
   #current-icon {
       display: flex;
@@ -25,7 +25,12 @@ body {
       justify-content: center/space-around/space-between;
   }
   
+  #forecast-weather{
+    display: flex;
+    flex-direction: row;
+  }
   
+
   #forecast-cards {
       display: flex;
       flex-direction: row;
