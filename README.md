@@ -9,8 +9,10 @@ Third-party APIs allow developers to access their data and functionality by maki
 1. Created HTML, CSS and JS. 
 2. Added a search engine, which will allow user to enter the city they wish to search for. 
 3. Responsive button added to the engine. 
+4. Displayed 5 day forecast using OpenWeather API
 
 ![Weather Dassh](https://user-images.githubusercontent.com/87839888/133872988-0dace084-ffbf-494e-916a-7463061220c5.png)
+
 
 Deployed Website [https://zermeno94.github.io/WEATHER-DASSH/]
 GitHub [https://github.com/Zermeno94/WEATHER-DASSH]
@@ -25,5 +27,9 @@ Miranda Zermeno
 * [https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container2&stacked=h]
 * [https://getbootstrap.com/docs/4.3/layout/grid/]
 * [https://getbootstrap.com/docs/4.0/components/input-group/]
+* [https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX]
+* [https://www.youtube.com/watch?v=wPElVpR1rwA]
+* [https://www.youtube.com/watch?v=c1r-NqYkFPc]
+* [Personal Tutor]
 
 
