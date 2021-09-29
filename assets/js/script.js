@@ -6,12 +6,12 @@ function createCityList(citySearchList) {
       var cityListEntry = $("<button>");
       cityListEntry.addClass("list-group-item list-group-item-action");
   
-      var splitStr = keys[i].toLowerCase().split(" ");
-      for (var j = 0; j < splitStr.length; j++) {
-        splitStr[j] =
-          splitStr[j].charAt(0).toUpperCase() + splitStr[j].substring(1);
+      var citySearch = keys[i].toLowerCase().split(" ");
+      for (var j = 0; j < citySearch.length; j++) {
+        citySearch[j] =
+          citySearch[j].charAt(0).toUpperCase() + citySearch[j].substring(1);
       }
-      var titleCasedCity = splitStr.join(" ");
+      var titleCasedCity = citySearch.join(" ");
       cityListEntry.text(titleCasedCity);
   
       $("#city-list").append(cityListEntry);
@@ -29,9 +29,8 @@ function createCityList(citySearchList) {
       "https://api.openweathermap.org/data/2.5/forecast?&units=imperial&appid=885e9149105e8901c9809ac018ce8658&q=" +
       city;
   
-    var latitude;
-  
-    var longitude;
+    var lat;
+    var lon;
   
     $.ajax({
       url: queryURL,
@@ -68,17 +67,17 @@ function createCityList(citySearchList) {
         $("#current-humidity").text("Humidity: " + weather.main.humidity + "%");
         $("#current-wind").text("Wind Speed: " + weather.wind.speed + " MPH");
   
-        latitude = weather.coord.lat;
-        longitude = weather.coord.lon;
+        lat = weather.coord.lat;
+        lon = weather.coord.lon;
   
         var queryURL3 =
           "https://api.openweathermap.org/data/2.5/uvi/forecast?&units=imperial&appid=c835f5e0d135d1c788e373d4a940d4e0&q=" +
           "&lat=" +
-          latitude +
+          lat +
           "&lon=" +
-          longitude;
+          lon;
   
-        $.ajax({
+          $.ajax({
           url: queryURL3,
           method: "GET"
           // Store all of the retrieved data inside of an object called "uvIndex"
@@ -192,55 +191,6 @@ function createCityList(citySearchList) {
       $("#forecast-weather").show();
     });
   });
-
-
-
-
-
-
-
-// API Key
-//var apiKey = "c835f5e0d135d1c788e373d4a940d4e0";
-
-//api url: https://api.openweathermap.org/data/2.5/weather?q=&appid=fde9c903c898c317388e65c683b198c3
-
-//var queryURLFive = "https://api.openweathermap.org/data/2.5/forecast?q=" + location + apiKey;
-
-//api.openweathermap.org/data/2.5/forecast?q={city name}&appid={API key}
-
-// latitude & longitude 
-//var lat;
-//var lon;
-
-//function getWeather(location ) {
-        //var apiKey= 'c835f5e0d135d1c788e373d4a940d4e0'
- //fetch(`https://api.openweathermap.org/data/2.5/weather?q={userInput} + location + &appid= + apiKey`)  
-        //.then(function(response) { return response.json() }) // Convert data to json
-        //.then(function(data) {
-          //console.log(data);
-        //})
-        //.catch(function() {
-          // catch any errors
-        //});
-      //}
-
-
-    
-
-
-
-//reference OpenWeather: https://openweathermap.org/api/one-call-api#how
-
-//Forloop for persisting the data onto HMTL page
-
-//for (var i = 0; i < localStorage.length; i++) {
-
-    //var city = localStorage.getItem(i);
-    // console.log(localStorage.getItem("City"));
-    //var cityName = $(".list-group").addClass("list-group-item");
-
-    //cityName.append("<li>" + city + "</li>");
-//}
 
 //NEED TO DO: 
 //GIVEN a weather dashboard with form inputs
