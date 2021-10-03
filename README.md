@@ -14,8 +14,8 @@ Third-party APIs allow developers to access their data and functionality by maki
 ![WEATHER DASSH!](https://user-images.githubusercontent.com/87839888/135187426-47b9b66f-fe5e-4293-8caa-c4625114d672.png)
 
 
-Deployed Website [https://zermeno94.github.io/WEATHER-DASSH/]
-GitHub [https://github.com/Zermeno94/WEATHER-DASSH]
+[Link to the deployed website](https://zermeno94.github.io/WEATHER-DASSH/)
+[Link to the repo](https://github.com/Zermeno94/WEATHER-DASSH)
 
 # Credits 
 Miranda Zermeno
