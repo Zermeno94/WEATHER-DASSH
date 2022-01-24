@@ -1,36 +1,51 @@
-# Homework 6- WEATHER-DASSH
+# Homework 6- WEATHER-DASSH   ☁️    🌤️   ☁️
 
-# Description 
+![GitHub license](https://img.shields.io/badge/license-MIT-ff69b4.svg) 
 
-Third-party APIs allow developers to access their data and functionality by making requests with specific parameters to a URL. Developers are often tasked with retrieving data from another application's API and using it in the context of their own. Your challenge is to build a weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
-
-# Task Completed
-
-1. Created HTML, CSS and JS. 
-2. Added a search engine, which will allow user to enter the city they wish to search for. 
-3. Responsive button added to the engine. 
-4. Displayed 5 day forecast using OpenWeather API
-
-![WEATHER DASSH!](https://user-images.githubusercontent.com/87839888/135187426-47b9b66f-fe5e-4293-8caa-c4625114d672.png)
+## Description
+This application  is a weather dashboard that will run in the browser and feature dynamically HTML and CSS.
 
 
-[Link to the deployed website](https://zermeno94.github.io/WEATHER-DASSH/)
+## Table of Contents 🔎
+- [Usage](#usage)
+- [Demo](#demo)
+ -[GitHub & Deploy Link](#githubdeploylink)
+- [Contributers](#contributers)
+- [Resources & Tutorials](#resources&tutorials)
+- [License](#license)
 
-[Link to the repository](https://github.com/Zermeno94/WEATHER-DASSH)
 
-# Credits 
-Miranda Zermeno
+### Usage ⚡
+This allow users to plan their day accordinly by searching multiple cities 5 Day forecast. The browser displays a clean design and make it easy for users to visually see the upcoming days weather by UV, Wind Speed, and Humidity. 
 
-# Resources and Tutorials utilized 
+### Demo 🎥
 
-* [https://www.w3schools.com/html/html_basic.asp]
-* [https://www.w3schools.com/html/html_links.asp]
-* [https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container2&stacked=h]
-* [https://getbootstrap.com/docs/4.3/layout/grid/]
-* [https://getbootstrap.com/docs/4.0/components/input-group/]
-* [https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX]
-* [https://www.youtube.com/watch?v=wPElVpR1rwA]
-* [https://www.youtube.com/watch?v=c1r-NqYkFPc]
-* [Personal Tutor]
+* [Link to Demo]()
 
+### GitHub & Deploy Link
+
+* [GitHub Link](https://github.com/Zermeno94/WEATHER-DASSH)
+* [Deploy Link]()
+
+## Contributers
+* Miranda Zermeno
+* AskBCS assistants
+
+
+
+## Resources & Tutorials  💻
+
+* [https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md](#https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+* [https://www.w3schools.com/html/html_basic.asp](#https://www.w3schools.com/html/html_basic.asp)
+* [https://www.w3schools.com/html/html_links.asp](#https://www.w3schools.com/html/html_links.asp)
+* [https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container2&stacked=h](#https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container2&stacked=h)
+* [https://getbootstrap.com/docs/4.3/layout/grid/](#https://getbootstrap.com/docs/4.3/layout/grid/)
+* [https://getbootstrap.com/docs/4.0/components/input-group/](#https://getbootstrap.com/docs/4.0/components/input-group/)
+* [https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX](#https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX)
+* [https://www.youtube.com/watch?v=wPElVpR1rwA](#https://www.youtube.com/watch?v=wPElVpR1rwA)
+* [https://www.youtube.com/watch?v=c1r-NqYkFPc](#https://www.youtube.com/watch?v=c1r-NqYkFPc)
+
+
+## MIT  License 📍
+This project is license under MIT
 

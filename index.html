@@ -2,142 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="https://kit.fontawesome.com/70fcd40144.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="Description" content="Enter your description here" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&family=Montserrat:wght@300&family=Roboto+Condensed:wght@300&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="./ASSETS/CSS/style.css">
+  <title>Weather App</title>
 </head>
 
 <body>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
-
-    <header>
-        <h1 class="container-fluid text-center text-white bg-primary p-2 col-lg"> WEATHER DASSH!!
-    </h1>
+    
+    <header class="header">
+        <h1>Weather Dassh</h1>
     </header>
-    <div class="container-fluid">
-        <div class=row>
-            <div class="col-md-3">
-                <div class="card" style="width:100%">
-                    <div class="search-box">
-                        <h2>Search for a City:</h2>
-                        <form  id="searchBox" class="form-inline">
-                            <div class="form-group">
-                                <input type="text" class="form-control" id="city-input">
-                            </div>
-                            <button id="search-button" type="submit" class="btn btn-primary"><i
-                                    class="fas fa-search"></i></button>
-                        </form>
-                    </div>
-                </div>
-                <div class="prevousSearches"></div>
-                <div id="city-history" class="card">
-                    <h3>Previous Searches</h3>
-                </div>    
-                    <ul id="city-list" class="list-group"></ul>
-                </div>
-            </div>
-            <div class="col-md-9">
-                <div id="current-weather" class="card">
-                    <div class="card-body">
-                        <div id="city-date-icon">
-                            <span id='city-name'>
-                            </span>
-                            <span id='current-icon'></span>
-                        </div>
-                        <p class="card-text" id="current-temp"></p>
-                        <p class="card-text" id="current-humidity"></p>
-                        <p class="card-text" id="current-wind"></p>
-                        <p class="card-text" id="current-uv"></p>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="forecast-weather" class="col-md-9">
-                        <h4>5-Day Forecast:</h4>
-                        <div id="forecast-cards">
-                            <div class="card forecast">
-                                <div id="forecast1" class="card-body">
-                                    <span class="card-title" id='forecast-date-1'>
-                                    </span>
-                                    <span id='forecast-date-icon1'></span>
-                                    <p class="card-text" id="forecast-temp1"></p>
-                                    <p class="card-text" id="forecast-humidity1"></p>
-                                </div>
-                            </div>
-                            <div class="card forecast">
-                                <div id="forecast2" class="card-body">
-                                    <span class="card-title" id='forecast-date-2'>
-                                    </span>
-                                    <span id='forecast-icon2'></span>
-                                    <p class="card-text" id="forecast-temp2"></p>
-                                    <p class="card-text" id="forecast-humidity2"></p>
-                                </div>
-                            </div>
-                            <div class="card forecast">
-                                <div id="forecast3" class="card-body">
-                                    <span class="card-title" id='forecast-date-3'>
-                                    </span>
-                                    <span id='forecast-icon3'></span>
-                                    <p class="card-text" id="forecast-temp3"></p>
-                                    <p class="card-text" id="forecast-humidity3"></p>
-                                </div>
-                            </div>
-                            <div class="card forecast">
-                                <div id="forecast4" class="card-body">
-                                    <span class="card-title" id='forecast-date-4'>
-                                    </span>
-                                    <span id='forecast-icon4'></span>
-                                    <p class="card-text" id="forecast-temp4"></p>
-                                    <p class="card-text" id="forecast-humidity4"></p>
-                                </div>
-                            </div>
-                            <div class="card forecast">
-                                <div id="forecast5" class="card-body">
-                                    <span class="card-title" id='forecast-date-5'>
-                                    </span>
-                                    <span id='forecast-icon5'></span>
-                                    <p class="card-text" id="forecast-temp5"></p>
-                                    <p class="card-text" id="forecast-humidity5"></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-    <script src="./assets/js/script.js"></script>
+    <main>
+        <div class="row p-4">
+            <section class="search">
+                <h3>Search for a City:</h3><br>
+                <input type="text" placeholder= "City Name" id="City-input"></inpput><br><br>
+                <button class="bg-primary" id="search-Btn">Search</button><br><br>
+
+                <ul class="search-list-group" id="search-history"></ul>
+                
+                <button class="btn-primary" id="clear-history">Clear</button>
+            
+
+            </section>
+            <div class="col p-2">
+                <section class="row current-forecast">
+
+                </section class='five-day'>
+                    <h3>5-Day Forecast:</h3><br>
+                    
+                    <div class="row FiveDay">
+                                    
+                    
+                        
+                    </div>
+                
+                </div>
+            </div>           
+                            
+        
+        </div>
+    
+    </main>
 
 </body>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
+<script src="./ASSETS/JS/script.js"></script>
+
+
 </html>
-<!--Need to Do-->
-
-<!--```
-AS A traveler
-I WANT to see the weather outlook for multiple cities
-SO THAT I can plan a trip accordingly
-```
-
-## Acceptance Criteria
-
-```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city-->

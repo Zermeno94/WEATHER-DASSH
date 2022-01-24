@@ -1,49 +1,107 @@
 body {
-    background-color: white;
-  }
-  
-  .heading {
-    background-color: #3c3c3c;
-    color: #ffffff;
-    text-align: center;
-    padding: 10px;
-  }
-  
-  input {
-    width: 75%;
-  }
-  
-  #city-list {
-    width: 22rem;
-  }
-  
-  #city-daste-icon,
-  #city-name,
-  #current-icon {
-      display: flex;
-      flex-direction: row;
-      justify-content: center/space-around/space-between;
-  }
-  
-  #forecast-weather{
-    display: flex;
-    flex-direction: row;
-  }
-  
-
-  #forecast-cards {
-      display: flex;
-      flex-direction: row;
-      justify-content: center/space-between;
-  }
-  
-  .forecast {
-      margin: 10px;
-      border-radius: 10px;
-  }
-
-.card{
-    background-color: rgb(124, 201, 227);
+  background-color:white;
+ 
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* I dont think i need much CSS since I'm keeping it simple. May need it when it comes to dispalying weather conditions
+.header {
+  display: flex;
+  justify-content: center;
+  background-color:rgb(240, 164, 177);
+  width: 100%;
+  align-items: center;
+  color: white;
+  margin-top: 15px;
+  padding-top: 10px;
+
+} 
+h1 {
+  font-weight: bolder;
+}
+h2 {
+  color:bl;
+  font-weight: bolder;
+  margin-left: 0px;
+}
+h3 {
+  color: black;
+  font-weight: bolder;
+  margin-top: 10px;
+  justify-content: space-around;
+  display: inline-flex;
+}
+.search-list-group-item {
+  list-style: none;
+  background-color:rgb(240, 164, 177);
+  border-radius: 10px;
+  font-weight: bold;
+  border-style: solid;
+  border-color:rgb(240, 164, 177);
+  
+  text-align: center;
+  justify-content: center;
+  color: white;
+  
+
+}
+.search {
+  background-color:white;
+  padding-left: 15px;
+}
+#search-Btn, #clear-history {
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+}
+input {
+  width: 100%;
+}
+#City-input {
+  border-radius: 10px;
+  
+}
+.five-day {
+  margin-left: 10px;
+}
+.FiveDay {
+  justify-content: space-around;
+
+}
+.col {
+  
+  padding-left: 5px;
+  margin-left: 5px;
+  
+}
+
+.current-forecast {
+  
+  margin-left: 5px;
+  margin-bottom: 10px;
+  display: block;
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  border-style:solid;
+  border-color:rgb(240, 164, 177);
+  font-weight: bolder;
+  padding-left: 5px;
+  
+  justify-content: space-around;
+}
+
+.day {
+  display: flexbox;
+  background-color:rgb(240, 164, 177);
+  color: white;
+  font-size: 20;
+  font-weight:bold;
+  border-radius: 10px;
+  
+  padding: 10px;
+  margin-left: 10px;
+}
+
+[class*="col-"] {
+  width: 100%;
+}
