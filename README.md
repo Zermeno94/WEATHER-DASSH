@@ -20,7 +20,7 @@ This allow users to plan their day accordinly by searching multiple cities 5 Day
 
 ### Demo 🎥
 
-![Untitled_ Jan 23, 2022 8_41 PM](https://user-images.githubusercontent.com/87839888/150713729-7c93d37a-287a-4d78-a528-6f2187cbefce.gif)
+* [Link to Demo](https://watch.screencastify.com/v/jMI540O4Bs9Gw19Ilxeq)
 
 
 
