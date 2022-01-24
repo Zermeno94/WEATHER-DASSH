@@ -45,6 +45,7 @@ This allow users to plan their day accordinly by searching multiple cities 5 Day
 * [https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX](#https://developer.mozilla.org/en-US/docs/Web/Guide/AJAX)
 * [https://www.youtube.com/watch?v=wPElVpR1rwA](#https://www.youtube.com/watch?v=wPElVpR1rwA)
 * [https://www.youtube.com/watch?v=c1r-NqYkFPc](#https://www.youtube.com/watch?v=c1r-NqYkFPc)
+* [https://css-tricks.com/perfect-full-page-background-image/](#https://css-tricks.com/perfect-full-page-background-image/)
 
 
 ## MIT  License 📍

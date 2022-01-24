@@ -1,6 +1,8 @@
 body {
-  background-color:white;
- 
+  /* background-color:white; */
+ background-image: url(https://i.pinimg.com/736x/b1/db/23/b1db235ad21fb6b8f2cfc8811d0d7f56.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
   font-family: 'Monospace', Monaco;
 }
 
@@ -36,17 +38,17 @@ h3 {
   border-radius: 10px;
   font-weight: bold;
   border-style: solid;
-  border-color:rgb(240, 164, 177);
-  
+  border-color:rgb(111, 108, 108);
   text-align: center;
   justify-content: center;
   color: white;
-  
-
 }
 .search {
-  background-color:white;
+  background-color: white;
   padding-left: 15px;
+  border-radius: 10px;
+  border-style: solid;
+  border-color:rgb(240, 164, 177);
 }
 #search-Btn, #clear-history {
   border-radius: 10px;
@@ -58,13 +60,13 @@ input {
 }
 #City-input {
   border-radius: 10px;
-  
+
 }
 .five-day {
   margin-left: 10px;
 }
 .fiveDayForecast {
-  justify-content: space-around;
+  justify-content: center;
 
 }
 .col {
@@ -87,7 +89,7 @@ input {
   font-weight: bolder;
   padding-left: 5px;
   
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .day {
