@@ -1,14 +1,15 @@
-var weatherAPIKey = "fff5fbbef22e4f2a26a024f03d625dd6";
-var cityInput = document.querySelector('#City-input');
-var searchButton = document.querySelector('#search-Btn');
-var currentForecast = document.querySelector('.current-forecast');
-var fiveDay = document.querySelector('.FiveDay');
-var searchHistoryList = [];
-var clearButton = document.querySelector('#clear-history');
+var APIKey = "fff5fbbef22e4f2a26a024f03d625dd6"; // Weather API Key
 
-function getWeather(city) {
+var cityInput = document.querySelector('#City-input'); //CityInput allows users to enter in city search
+var searchButton = document.querySelector('#search-Btn'); // Enbles search
+var currentForecast = document.querySelector('.current-forecast'); // GET current forcast in browser 
+var fiveDayForecast = document.querySelector('.fiveDayForecast'); // GET weather dat for 5 day forecast
+var searchHistory = []; // City search array
+var clearHistory = document.querySelector('#clear-history'); // Allows to clear out searches 
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${weatherAPIKey}&units=imperial`, {
+function getWeather(city) { // This functions fetches the weather data
+
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`, { 
         method: 'GET',
         credentials: 'same-origin',
         redirect: 'follow'
@@ -19,7 +20,7 @@ function getWeather(city) {
         })
         .then(function (data) {
             console.log(data);
-            var oneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=${weatherAPIKey}&units=imperial`
+            var oneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=${APIKey}&units=imperial`
 
             fetch(oneCall)
                 .then(function (response) {
@@ -42,11 +43,11 @@ function getWeather(city) {
                     <p class="current-city">Humidity: <span id="humidity-info">${data.main.humidity} %</span></p>
                     <p class="current-city">UV Index: <span id="uv-index">${oneCallData.current.uvi}</span></p>
                     `
-                    fiveDay.innerHTML = ''
+                    fiveDayForecast.innerHTML = ' '
                     for (let i = 1; i < 6; i++) {
                         var iconurl = "http://openweathermap.org/img/w/" + oneCallData.daily[i].weather[0].icon + ".png";
 
-                        fiveDay.innerHTML = fiveDay.innerHTML + `<div class="day" id="box1">
+                        fiveDayForecast.innerHTML = fiveDayForecast.innerHTML + `<div class="day" id="box1">
                 <p>${moment(oneCallData.daily[i].dt, 'X').format('MM/DD/YYYY')}</p>
                 <img class="weather-img" src='${iconurl}'>
                 </br>
@@ -71,8 +72,8 @@ function getWeather(city) {
 }
 
 function find(c) {
-    for (var i = 0; i < searchCityList.length; i++) {
-        if (c.toUpperCase() === searchCityList[i]) {
+    for (var i = 0; i < searchHistory.length; i++) {
+        if (c.toUpperCase() === searchHistory[i]) {
             return -1;
         }
     }
@@ -84,15 +85,15 @@ searchButton.addEventListener('click', function (e) {
     e.preventDefault();
 
     var city = $('#City-input').val().trim();
-    if (!searchHistoryList.includes(city)) {
-        searchHistoryList.push(city);
+    if (!searchHistory.includes(city)) {
+        searchHistory.push(city);
         var searchedCity = $(`
              <li class='search-list-group-item'>${city}</li>
              `);
         $('#search-history').append(searchedCity);
     };
 
-    localStorage.setItem('city', JSON.stringify(searchHistoryList));
+    localStorage.setItem('city', JSON.stringify(searchHistory));
 
 })
 
@@ -110,7 +111,8 @@ $(document).ready(function () {
     }
 })
 
-clearButton.addEventListener('click', function (e) {
+// Clears out search history
+clearHistory.addEventListener('click', function (e) {
     if (localStorage.length > 0) {
         $('.search-list-group-item').html('');
     }
