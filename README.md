@@ -20,10 +20,6 @@ This allow users to plan their day accordinly by searching multiple cities 5 Day
 
 ### Demo 🎥
 
-* [Link to Demo](https://watch.screencastify.com/v/jMI540O4Bs9Gw19Ilxeq)
-
-
-
 ![Weather Dassh](https://user-images.githubusercontent.com/87839888/150713151-0cb91d1e-7945-4d00-a294-24858b674d0c.png)
 
 
@@ -31,7 +27,7 @@ This allow users to plan their day accordinly by searching multiple cities 5 Day
 ### GitHub & Deploy Link
 
 * [GitHub Link](https://github.com/Zermeno94/WEATHER-DASSH)
-* [Deploy Link]()
+* [Deploy Link](https://zermeno94.github.io/WEATHER-DASSH/)
 
 ## Contributers
 * Miranda Zermeno
