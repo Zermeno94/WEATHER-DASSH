@@ -31,6 +31,9 @@ function getWeather(city) { // This functions fetches the weather data for city
 
                     var iconurl = "http://openweathermap.org/img/w/" + data.weather[0].icon + ".png";
 
+                    // This will display current city weather on the browser
+                    // Includes Name of City, Date, and icon (Openweather)
+                    // Includes UV,Wind Speed, and Humdity
                     currentForecast.innerHTML = `
                     <div class="cityName"><h3 id="city">${data.name} </h3>
                         <div id="current-date">(${moment(data.dt, 'X').format('MM/DD/YYYY')})
@@ -38,11 +41,14 @@ function getWeather(city) { // This functions fetches the weather data for city
                         </div>                    
                     </div>
                     
+                
                     <p class="current-city">Temp: <span id="temp-info">${data.main.temp} ${"&#176F"}</span></hp></p>
                     <p class="current-city">Wind Speed: <span id="wind-info">${data.wind.speed} MPH</span></p>
                     <p class="current-city">Humidity: <span id="humidity-info">${data.main.humidity} %</span></p>
                     <p class="current-city">UV Index: <span id="uv-index">${oneCallData.current.uvi}</span></p>
                     `
+                    // Display city's forcast
+                    //Includes city name, date, UV, wind speed, Humdity 
                     fiveDayForecast.innerHTML = ' '
                     for (let i = 1; i < 6; i++) {
                         var iconurl = "http://openweathermap.org/img/w/" + oneCallData.daily[i].weather[0].icon + ".png";
@@ -80,6 +86,7 @@ function find(c) {
     return 1;
 }
 
+// This will allow city search to be listed 
 searchButton.addEventListener('click', function (e) {
     getWeather(cityInput.value);
     e.preventDefault();
@@ -93,6 +100,7 @@ searchButton.addEventListener('click', function (e) {
         $('#search-history').append(searchedCity);
     };
 
+    // Communicates to the console of the search
     localStorage.setItem('city', JSON.stringify(searchHistory));
 
 })
