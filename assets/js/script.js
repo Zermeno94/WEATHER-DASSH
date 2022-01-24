@@ -9,7 +9,7 @@ var clearHistory = document.querySelector('#clear-history'); // Allows to clear 
 
 function getWeather(city) { // This functions fetches the weather data
 
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`, { 
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`, {  // Fetches city weather
         method: 'GET',
         credentials: 'same-origin',
         redirect: 'follow'
@@ -18,7 +18,7 @@ function getWeather(city) { // This functions fetches the weather data
         .then(function (response) {
             return response.json();
         })
-        .then(function (data) {
+        .then(function (data) { // This function gets lat and lon data 
             console.log(data);
             var oneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=${APIKey}&units=imperial`
 
