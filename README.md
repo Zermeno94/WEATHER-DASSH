@@ -20,7 +20,7 @@ This allow users to plan their day accordinly by searching multiple cities 5 Day
 
 ### Demo 🎥
 
-![Weather Dassh](https://user-images.githubusercontent.com/87839888/150713418-03cc9912-d458-4312-9bbe-7cabf1ad2630.png)
+![Untitled_ Jan 23, 2022 8_41 PM](https://user-images.githubusercontent.com/87839888/150713634-2b0d660a-f293-4d33-9eb7-14de7f060dc0.gif)
 
 
 ![Weather Dassh](https://user-images.githubusercontent.com/87839888/150713151-0cb91d1e-7945-4d00-a294-24858b674d0c.png)
