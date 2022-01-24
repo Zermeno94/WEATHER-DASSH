@@ -36,6 +36,7 @@ This allow users to plan their day accordinly by searching multiple cities 5 Day
 ## Resources & Tutorials  💻
 
 * [https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md](#https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)
+* [https://www.youtube.com/watch?v=nGVoHEZojiQ](#https://www.youtube.com/watch?v=nGVoHEZojiQ)
 * [https://www.w3schools.com/html/html_basic.asp](#https://www.w3schools.com/html/html_basic.asp)
 * [https://www.w3schools.com/html/html_links.asp](#https://www.w3schools.com/html/html_links.asp)
 * [https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container2&stacked=h](#https://www.w3schools.com/bootstrap4/tryit.asp?filename=trybs_gs_container2&stacked=h)
