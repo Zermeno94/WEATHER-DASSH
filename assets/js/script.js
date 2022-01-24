@@ -1,13 +1,13 @@
-var APIKey = "fff5fbbef22e4f2a26a024f03d625dd6"; // Weather API Key
+var APIKey = "fff5fbbef22e4f2a26a024f03d625dd6"; // Weather API Key (OpenWeather)
 
 var cityInput = document.querySelector('#City-input'); //CityInput allows users to enter in city search
 var searchButton = document.querySelector('#search-Btn'); // Enbles search
 var currentForecast = document.querySelector('.current-forecast'); // GET current forcast in browser 
-var fiveDayForecast = document.querySelector('.fiveDayForecast'); // GET weather dat for 5 day forecast
+var fiveDayForecast = document.querySelector('.FiveDay'); // GET weather dat for 5 day forecast
 var searchHistory = []; // City search array
 var clearHistory = document.querySelector('#clear-history'); // Allows to clear out searches 
 
-function getWeather(city) { // This functions fetches the weather data
+function getWeather(city) { // This functions fetches the weather data for city
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${APIKey}&units=imperial`, {  // Fetches city weather
         method: 'GET',
@@ -18,7 +18,7 @@ function getWeather(city) { // This functions fetches the weather data
         .then(function (response) {
             return response.json();
         })
-        .then(function (data) { // This function gets lat and lon data 
+        .then(function (data) { // This function gets lat and lon data through Open Weather One Call API
             console.log(data);
             var oneCall = `https://api.openweathermap.org/data/2.5/onecall?lat=${data.coord.lat}&lon=${data.coord.lon}&exclude={part}&appid=${APIKey}&units=imperial`
 
